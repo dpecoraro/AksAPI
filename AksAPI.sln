@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AksAPI", "AksAPI\AksAPI.csproj", "{DB661E4B-1582-4788-A724-4FF65816DE87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{F46D2C6B-B72F-4640-BD58-F2B8FFC59E22}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{191E9092-3B1F-4F52-BFC2-CB8675D0BD94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB661E4B-1582-4788-A724-4FF65816DE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB661E4B-1582-4788-A724-4FF65816DE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB661E4B-1582-4788-A724-4FF65816DE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB661E4B-1582-4788-A724-4FF65816DE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F46D2C6B-B72F-4640-BD58-F2B8FFC59E22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F46D2C6B-B72F-4640-BD58-F2B8FFC59E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F46D2C6B-B72F-4640-BD58-F2B8FFC59E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F46D2C6B-B72F-4640-BD58-F2B8FFC59E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{191E9092-3B1F-4F52-BFC2-CB8675D0BD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191E9092-3B1F-4F52-BFC2-CB8675D0BD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191E9092-3B1F-4F52-BFC2-CB8675D0BD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191E9092-3B1F-4F52-BFC2-CB8675D0BD94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED36FF40-DFB3-4133-A710-9C8C2B22433C}
+	EndGlobalSection
+EndGlobal

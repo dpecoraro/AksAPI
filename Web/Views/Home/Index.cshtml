@@ -1,0 +1,35 @@
+﻿@model WeatherForecastViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th scope="col">Date</th>
+                <th scope="col">TemperatureC</th>
+                <th scope="col">TemperatureF</th>
+                <th scope="col">Summary</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+            @if (Model.Forecasts.Any())
+            {
+                @foreach (var f in Model.Forecasts)
+                {
+                    <tr>
+                        <td>@f.Date</td>
+                        <td>@f.TemperatureC</td>
+                        <td>@f.TemperatureF</td>
+                        <td>@f.Summary</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

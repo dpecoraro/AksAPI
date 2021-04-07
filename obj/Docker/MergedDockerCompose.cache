@@ -1,0 +1,30 @@
+services:
+  aksapi:
+    build:
+      context: C:\Users\demetrius.pecoraro\Documents\POC\DOTNET\Challenges\AksAPI
+      dockerfile: AksAPI/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: aksapi
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\demetrius.pecoraro\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\demetrius.pecoraro\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  web:
+    build:
+      context: C:\Users\demetrius.pecoraro\Documents\POC\DOTNET\Challenges\AksAPI
+      dockerfile: Web/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: web
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\demetrius.pecoraro\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\demetrius.pecoraro\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

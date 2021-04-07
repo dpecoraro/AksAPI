@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+RYKXfVMQw4EIZaAu1yC7zR43kCl+bTnmUHFOVx4s09cMNTMxtvETeG4Vopli4DgxY+EiwYotJ2zGEMhvIR7gQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\demetrius.pecoraro\\Documents\\POC\\DOTNET\\Challenges\\AksAPI\\Web\\Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\demetrius.pecoraro\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
+    "C:\\Users\\demetrius.pecoraro\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

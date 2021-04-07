@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  aksapi:
+    image: ${DOCKER_REGISTRY-}aksapi
+    build:
+      context: .
+      dockerfile: AksAPI/Dockerfile
+
+  web:
+    image: ${DOCKER_REGISTRY-}web
+    build:
+      context: .
+      dockerfile: Web/Dockerfile
+
