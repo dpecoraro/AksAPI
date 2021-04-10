@@ -31,3 +31,22 @@ spec:
           - name: ASPNETCORE_ENVIRONMENT
             value: Development
 
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: aksapi-service
+spec:
+  type: NodePort
+  selector:
+    app: aksapi
+  ports:
+  - name: http
+    nodePort: 31000
+    port: 8000
+    protocol: TCP        
+    targetPort: 80
+    
+
+

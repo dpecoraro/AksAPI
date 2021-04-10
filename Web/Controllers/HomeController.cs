@@ -27,7 +27,7 @@ namespace Web.Controllers
 
                 var httpClient = new HttpClient();
 
-                var req = await httpClient.GetAsync("http://aksapi/WeatherForecast");
+                var req = await httpClient.GetAsync("http://192.168.39.106:31000/WeatherForecast");
 
                 if (req.IsSuccessStatusCode)
                 {
