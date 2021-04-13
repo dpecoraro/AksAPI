@@ -6,16 +6,16 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["AksAPI/AksAPI.csproj", "AksAPI/"]
-RUN dotnet restore "AksAPI/AksAPI.csproj"
+COPY AksAPI.csproj .
+RUN dotnet restore 
 COPY . .
-WORKDIR "/src/AksAPI"
-RUN dotnet build "AksAPI.csproj" -c Release -o /app/build
+RUN dotnet build -c Release
 
 FROM build AS publish
-RUN dotnet publish "AksAPI.csproj" -c Release -o /app/publish
+RUN dotnet publish -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "AksAPI.dll"]
+

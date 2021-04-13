@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aksapi-deployment
+  labels:
+      app:  aksapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aksapi
+  template:
+    metadata:
+      labels:
+        app: aksapi
+    spec:
+      containers:
+      - name: aksapi
+        image: containergroup.azurecr.io/aksapi:v1
+        imagePullPolicy: IfNotPresent       
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Development
+      imagePullSecrets:
+          - name:  acr-secret
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: aksapi-service
+spec:
+  selector:
+    app: aksapi
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP        
+    
+
+
